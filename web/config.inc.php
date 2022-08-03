@@ -1,3 +1,3 @@
 <?php
-    $libernet_dir = "LIBERNET_DIR";
+    $libernet_dir = "/root/libernet";
 ?>

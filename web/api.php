@@ -326,6 +326,7 @@
                     $dns_resolver = $data['dns_resolver'];
                     $memory_cleaner = $data['memory_cleaner'];
                     $ping_loop = $data['ping_loop'];
+                    $auto_recon = $data['auto_recon'];
                     switch ($mode) {
                         // ssh
                         case 0:
@@ -396,6 +397,7 @@
                     $system_config->tunnel->dns_resolver = $dns_resolver;
                     $system_config->system->memory_cleaner = $memory_cleaner;
                     $system_config->tunnel->ping_loop = $ping_loop;
+                    $system_config->tunnel->auto_recon = $auto_recon;
                     $system_config = json_encode($system_config, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
                     file_put_contents($libernet_dir.'/system/config.json', $system_config);
                     json_response('Configuration applied');
